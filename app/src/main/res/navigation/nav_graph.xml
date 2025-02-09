@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaRecetasFragment">
+
+    <fragment
+        android:id="@+id/listaRecetasFragment"
+        android:name="com.example.recetas.fragments.ListaRecetasFragment"
+        android:label="Recetas" >
+        <!-- Acciones existentes -->
+        <action
+            android:id="@+id/action_listaRecetasFragment_to_detalleRecetaFragment"
+            app:destination="@id/detalleRecetaFragment" />
+        <action
+            android:id="@+id/action_listaRecetasFragment_to_anadirRecetaFragment"
+            app:destination="@id/anadirRecetaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleRecetaFragment"
+        android:name="com.example.recetas.fragments.DetalleRecetaFragment"
+        android:label="Detalle Receta" >
+
+        <!-- NUEVA ACCIÓN para editar/ir a AñadirReceta -->
+        <action
+            android:id="@+id/action_detalleRecetaFragment_to_anadirRecetaFragment"
+            app:destination="@id/anadirRecetaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/anadirRecetaFragment"
+        android:name="com.example.recetas.fragments.AñadirRecetaFragment"
+        android:label="Añadir Receta" />
+
+    <fragment
+        android:id="@+id/buscarRecetasFragment"
+        android:name="com.example.recetas.fragments.BuscarRecetaFragment"
+        android:label="Buscar Recetas" />
+</navigation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Opción para la lista de recetas -->
+    <item
+        android:id="@+id/listaRecetasFragment"
+        android:icon="@drawable/ic_list"
+        android:title="Recetas" />
+    <!-- Opción para la búsqueda web -->
+    <item
+        android:id="@+id/buscarRecetasFragment"
+        android:icon="@drawable/ic_search"
+        android:title="Buscar" />
+</menu>

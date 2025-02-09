@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recetas</string>
+    <string name="receta_imagen">Imagen de la Receta</string>
+    <string name="add_receta">Añadir Receta</string>
+    <string name="edit_receta">Editar</string>
+    <string name="delete_receta">Eliminar</string>
+    <string name="select_image">Seleccionar Imagen</string>
+    <string name="save_receta">Guardar Receta</string>
+</resources>
