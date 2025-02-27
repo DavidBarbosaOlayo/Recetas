@@ -29,7 +29,6 @@ public class ListaRecetasFragment extends Fragment {
     private RecetaViewModel recetaViewModel;
 
     public ListaRecetasFragment() {
-        // Required empty public constructor
     }
 
     public static ListaRecetasFragment newInstance() {
@@ -38,7 +37,6 @@ public class ListaRecetasFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate el layout para este fragmento
         return inflater.inflate(R.layout.fragment_lista_recetas, container, false);
     }
 

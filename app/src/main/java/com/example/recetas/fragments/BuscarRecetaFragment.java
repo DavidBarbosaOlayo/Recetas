@@ -15,7 +15,6 @@ import com.example.recetas.R;
 public class BuscarRecetaFragment extends Fragment {
 
     public BuscarRecetaFragment() {
-        // Constructor público vacío requerido
     }
 
     public static BuscarRecetaFragment newInstance() {
@@ -38,7 +37,7 @@ public class BuscarRecetaFragment extends Fragment {
         webSettings.setDomStorageEnabled(true); // Habilitar almacenamiento en el navegador
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW); // Permitir contenido mixto
 
-        // Evita que el navegador externo abra los enlaces
+        // Evitamos que el navegador externo abra los enlaces
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -47,7 +46,7 @@ public class BuscarRecetaFragment extends Fragment {
             }
         });
 
-        // Cargar la URL
+        // Cargamos la URL
         webView.loadUrl("https://www.hellofresh.es/recipes/recetas-faciles");
     }
 }

@@ -28,7 +28,6 @@ public class DetalleRecetaFragment extends Fragment {
     private int recetaId;
 
     public DetalleRecetaFragment() {
-        // Required empty public constructor
     }
 
     public static DetalleRecetaFragment newInstance() {
@@ -37,7 +36,6 @@ public class DetalleRecetaFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate el layout para este fragmento
         return inflater.inflate(R.layout.fragment_detalle_receta, container, false);
     }
 
@@ -45,7 +43,7 @@ public class DetalleRecetaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Obtener el ID de la receta pasada como argumento
+        // Obtenemos el ID de la receta pasada como argumento
         if (getArguments() != null) {
             recetaId = getArguments().getInt("recetaId", -1);
         }
@@ -73,7 +71,7 @@ public class DetalleRecetaFragment extends Fragment {
                     textViewTiempo.setText(String.valueOf(receta.getTiempo()) + " minutos");
                     textViewIngredientes.setText(receta.getIngredientes());
                     textViewInstrucciones.setText(receta.getInstrucciones());
-                    // Cargar la imagen usando Glide
+                    // Cargamos la imagen usando Glide
                     Glide.with(getContext()).load(receta.getImagen()).into(imageViewReceta);
                 }
             }

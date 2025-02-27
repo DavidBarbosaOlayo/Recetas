@@ -44,7 +44,6 @@ public class AñadirRecetaFragment extends Fragment {
     private int recetaId = -1;
 
     public AñadirRecetaFragment() {
-        // Required empty public constructor
     }
 
     public static AñadirRecetaFragment newInstance() {
@@ -88,7 +87,6 @@ public class AñadirRecetaFragment extends Fragment {
                             editTextTiempo.setText(String.valueOf(receta.getTiempo()));
                             editTextIngredientes.setText(receta.getIngredientes());
                             editTextInstrucciones.setText(receta.getInstrucciones());
-                            // Cargar la imagen usando Glide
                             Glide.with(getContext())
                                     .load(receta.getImagen())
                                     .placeholder(R.drawable.ic_placeholder)
@@ -103,7 +101,7 @@ public class AñadirRecetaFragment extends Fragment {
                                         .error(R.drawable.ic_error)
                                         .into(imageViewReceta);
                             } else {
-                                // No tenemos imagen válida, usar un placeholder
+                                // Si no tenemos imagen válida, usamos un placeholder
                                 imageUri = null;
                                 Glide.with(getContext())
                                         .load(R.drawable.ic_placeholder)
@@ -121,7 +119,6 @@ public class AñadirRecetaFragment extends Fragment {
             @Override
             public void onClick(View v){
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                    // Android 13 en adelante, usa permiso específico para seleccionar imágenes
                     if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
                         requestPermissions(new String[]{Manifest.permission.READ_MEDIA_IMAGES}, REQUEST_PERMISSION);
                     } else {
